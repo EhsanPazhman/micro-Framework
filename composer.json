@@ -1,0 +1,16 @@
+{
+    "name": "ehsan/microframework",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"    
+        }
+    },
+    "authors": [
+        {
+            "name": "Ehsan Pazhman"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
