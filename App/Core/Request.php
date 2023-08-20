@@ -9,7 +9,7 @@ class Request{
     public function __construct()
     {
         $this->params = $_REQUEST; # params
-        $this->method = $_SERVER['REQUEST_METHOD'];
+        $this->method = strtolower($_SERVER['REQUEST_METHOD']);
         $this->agent = $_SERVER['HTTP_USER_AGENT'];
         $this->ip = $_SERVER['REMOTE_ADDR'];
         $this->uri = strtok($_SERVER['REQUEST_URI'], '?');

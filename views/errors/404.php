@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404: Not Found! </title>
 </head>
-<body style="background-color: #7c0f0f;">
-<h1 style="margin: 100px; text-align: center; color: #060606;">Page Not Found!</h1>
+<body style="background-color: #a79f9f;">
+<h1 style="margin: 100px; text-align: center; color: #060606; margin-bottom: -100px;">404</h1>
+<h3 style="margin: 100px; text-align: center; color: #060606;">Page Not Found!</h3>
 </body>
 </html>
