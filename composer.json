@@ -11,6 +11,7 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "hisorange/browser-detect": "^4.5"
     }
 }

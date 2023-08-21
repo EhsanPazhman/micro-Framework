@@ -1,7 +1,11 @@
 <?php
+
 namespace App\Core\Routing;
+
 use \App\Core\Request;
-class Router{
+
+class Router
+{
     private $request;
     private $routes;
     private $current_route;
@@ -11,17 +15,18 @@ class Router{
         $this->request = new Request();
         $this->routes = Route::routes();
         $this->current_route = $this->find_route($this->request) ?? null;
+        # run middleware
     }
     public function find_route(Request $request)
     {
 
         foreach ($this->routes as $route) {
-            if (in_array($request->method(), $route['methods']) && $request->uri() == $route['uri']){
+            if (in_array($request->method(), $route['methods']) && $request->uri() == $route['uri']) {
                 return $route;
             }
         }
         return null;
-    }   
+    }
     public function dispatch404()
     {
         header("HTTP/1.0 404 Not Found");
@@ -33,17 +38,17 @@ class Router{
 
         # 404 : uri not exist
         if (is_null($this->current_route)) {
-            $this->dispatch404(); 
+            $this->dispatch404();
         }
         $this->dispatch($this->current_route);
     }
-    private function dispatch($route) 
+    private function dispatch($route)
     {
-         # action : null
-         $action = $route['action'] ?? null;
-         if (is_null($action ) || empty($action)) {
+        # action : null
+        $action = $route['action'] ?? null;
+        if (is_null($action) || empty($action)) {
             return;
-         }
+        }
         # action : Clousure
         if (is_callable($action)) {
             $action();
