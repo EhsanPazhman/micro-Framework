@@ -1,8 +1,11 @@
 <?php
 use App\Core\Routing\Route;
+use App\Middlewares\BlockFirefox;
+use App\Middlewares\BlockChrome;
+use App\Middlewares\BlockIE;
 
 Route::get('/', 'HomeController@index');
-Route::get('/todo/list', 'TodoController@list');
+Route::get('/todo/list', 'TodoController@list',[BlockChrome::class, BlockFirefox::class,BlockIE::class,]);
 Route::get('/todo/add', 'TodoController@add'); 
 Route::get('/archive', 'ArchiveController@index');
 Route::get('/archive/articles', 'ArchiveController@articles');
