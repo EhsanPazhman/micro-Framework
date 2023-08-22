@@ -6,7 +6,6 @@ class BlockChrome implements MiddlewareInterface{
     public function handle()
     { 
         global $request;
-        // echo 'BlockIE';
         if (Browser::isChrome()) {
             die('Blocked Chrome');
         }

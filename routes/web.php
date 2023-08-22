@@ -5,6 +5,8 @@ use App\Middlewares\BlockChrome;
 use App\Middlewares\BlockIE;
 
 Route::get('/', 'HomeController@index');
+Route::get('/post/{slug}', 'PostController@single');
+Route::get('/post/{slug}/comments/{cid}', 'PostController@comment');
 Route::get('/todo/list', 'TodoController@list',[BlockChrome::class, BlockFirefox::class,BlockIE::class,]);
 Route::get('/todo/add', 'TodoController@add'); 
 Route::get('/archive', 'ArchiveController@index');
