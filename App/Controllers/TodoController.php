@@ -1,13 +1,16 @@
 <?php
 namespace App\Controllers;
+
 class TodoController{
-    public function list()
-    
-    {
+
+    public function list(){
+        # db 
         $data = [
-           'tasks' => ['first task', 'second task', 'six task', 'ten task', 'Test task'],
-           'title' => 'Taks list'
+            'tasks' => [ 'First Task', 'Second Task', '7th Task', 'Test Task', 'another Task'],
+            'title' => 'لیست تسک ها'
         ];
-    view("todo.list", $data);
+
+        view('todo.list',$data);
     }
+
 }
