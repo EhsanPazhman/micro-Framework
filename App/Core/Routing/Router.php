@@ -26,10 +26,12 @@ class Router{
     }
 
     private function run_route_middleware(){
-        $middleware = $this->current_route['middleware'];
-        foreach($middleware as $middleware_class){
-            $middleware_obj = new $middleware_class;
-            $middleware_obj->handle();
+        if (!is_null($this->current_route) && isset($this->current_route['middleware'])) {
+            $middleware = $this->current_route['middleware'];
+            foreach($middleware as $middleware_class){
+                $middleware_obj = new $middleware_class;
+                $middleware_obj->handle();
+            }
         }
     }
 
@@ -44,7 +46,6 @@ class Router{
         }
         return null;
     }
-
 
     public function regex_matched($route){
         global $request;
