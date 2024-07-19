@@ -6,15 +6,15 @@
   <p align="center">
     Powerful PHP MVC microFramework
     <br>
-    <a href="https://github.com/mgazori/microphp/issues">Report Bug </a>
+  <a href="https://github.com/EhsanPazhman/micro-Framework/issues">Report Bug </a>
     |
-     <a href="https://github.com/mgazori/microphp/issues"> Request Feature</a>
+     <a href="https://github.com/EhsanPazhman/micro-Framework/issues"> Request Feature</a>
   </p>
 </p>
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [About microphp](#about-microphp)
+- [About micro-Framework](#about-micro-Framework)
 - [Built with](#built-with)
 - [Setup training](#setup-training)
 - [Bugs in the project](#bugs-in-the-project)
